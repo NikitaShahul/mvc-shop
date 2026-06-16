@@ -1,17 +1,17 @@
 {% extends "shop/base.html" %}
 {% block content %}
-<h2>Покупатель:  customer.name </h2>
-<p>Количество покупок:  customer.purchase_count </p>
-<p>Накопительная скидка:  customer.discount_percent %</p>
+<h2>Покупатель: {{ customer.name }}</h2>
+<p>Количество покупок: {{ customer.purchase_count }}</p>
+<p>Накопительная скидка: {{ customer.discount_percent }}%</p>
 <h3>История покупок</h3>
 <table border="1" cellpadding="6">
     <tr><th>Дата</th><th>Товар</th><th>Скидка, %</th><th>Уплачено</th></tr>
     {% for p in purchases %}
     <tr>
-        <td> p.date </td>
-        <td> p.product.name </td>
-        <td> p.discount_percent </td>
-        <td> p.price_paid </td>
+        <td>{{ p.date }}</td>
+        <td>{{ p.product.name }}</td>
+        <td>{{ p.discount_percent }}</td>
+        <td>{{ p.price_paid }}</td>
     </tr>
     {% endfor %}
 </table>

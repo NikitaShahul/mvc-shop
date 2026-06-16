@@ -5,8 +5,8 @@
     <tr><th>Наименование</th><th>Цена</th><th></th></tr>
     {% for product in products %}
     <tr>
-        <td> product.name </td>
-        <td> product.price </td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
         <td><a href="{% url 'shop:buy' product.id %}">Купить</a></td>
     </tr>
     {% endfor %}
@@ -16,9 +16,9 @@
 <ul>
     {% for customer in customers %}
     <li>
-        <a href="{% url 'shop:customer_detail' customer.id %}"> customer.name </a>
-        — покупок:  customer.purchase_count ,
-        скидка:  customer.discount_percent %
+        <a href="{% url 'shop:customer_detail' customer.id %}">{{ customer.name }}</a>
+        — покупок: {{ customer.purchase_count }},
+        скидка: {{ customer.discount_percent }}%
     </li>
     {% empty %}
     <li>Пока нет покупателей</li>

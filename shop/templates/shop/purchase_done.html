@@ -1,11 +1,11 @@
 {% extends "shop/base.html" %}
 {% block content %}
-<h2>Спасибо за покупку,  customer.name !</h2>
-<p>Товар:  purchase.product.name </p>
-<p>Применённая скидка:  purchase.discount_percent %</p>
-<p>Уплачено:  purchase.price_paid 
-    (цена без скидки:  product.price )</p>
-<p>Всего покупок:  customer.purchase_count .
-    Текущая накопительная скидка:  next_discount %</p>
+<h2>Спасибо за покупку, {{ customer.name }}!</h2>
+<p>Товар: {{ purchase.product.name }}</p>
+<p>Применённая скидка: {{ purchase.discount_percent }}%</p>
+<p>Уплачено: {{ purchase.price_paid }}
+    (цена без скидки: {{ product.price }})</p>
+<p>Всего покупок: {{ customer.purchase_count }}.
+    Текущая накопительная скидка: {{ next_discount }}%</p>
 <p><a href="{% url 'shop:index' %}">Назад к списку</a></p>
 {% endblock %}
