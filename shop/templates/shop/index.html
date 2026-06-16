@@ -1,0 +1,27 @@
+{% extends "shop/base.html" %}
+{% block content %}
+<h2>Список товаров</h2>
+<table border="1" cellpadding="6">
+    <tr><th>Наименование</th><th>Цена</th><th></th></tr>
+    {% for product in products %}
+    <tr>
+        <td> product.name </td>
+        <td> product.price </td>
+        <td><a href="{% url 'shop:buy' product.id %}">Купить</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Покупатели</h2>
+<ul>
+    {% for customer in customers %}
+    <li>
+        <a href="{% url 'shop:customer_detail' customer.id %}"> customer.name </a>
+        — покупок:  customer.purchase_count ,
+        скидка:  customer.discount_percent %
+    </li>
+    {% empty %}
+    <li>Пока нет покупателей</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+{% block content %}
+<h2>Покупка товара:  product.name </h2>
+<p>Цена:  product.price </p>
+<form method="post">
+    {% csrf_token %}
+    <label>Имя покупателя:
+        <input type="text" name="customer_name" required>
+    </label>
+    <button type="submit">Купить</button>
+</form>
+<p><a href="{% url 'shop:index' %}">Назад к списку</a></p>
+{% endblock %}
