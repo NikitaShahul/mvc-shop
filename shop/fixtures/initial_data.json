@@ -1,0 +1,7 @@
+[
+    {"model": "shop.product", "pk": 1, "fields": {"name": "Набор посуды", "price": 2500}},
+    {"model": "shop.product", "pk": 2, "fields": {"name": "Швабра", "price": 700}},
+    {"model": "shop.product", "pk": 3, "fields": {"name": "Гладильная доска", "price": 1800}},
+    {"model": "shop.product", "pk": 4, "fields": {"name": "Набор полотенец", "price": 1200}},
+    {"model": "shop.product", "pk": 5, "fields": {"name": "Органайзер для хранения", "price": 900}}
+]

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Магазин товаров для быта{% endblock %}</title>
+</head>
+<body>
+    <h1><a href="{% url 'shop:index' %}">Магазин товаров для быта</a></h1>
+    {% block content %}{% endblock %}
+</body>
+</html>
